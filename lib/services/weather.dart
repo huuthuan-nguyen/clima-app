@@ -1,9 +1,11 @@
+import 'package:clima_app/services/location.dart';
+import 'package:clima_app/services/networking.dart';
+
 const apiKey = "443d928a68698e3ccfa85cac5cb32d1c";
 const openWeatherMapDomain = "api.openweathermap.org";
 const openWeatherMapPath = "/data/2.5/weather";
 
 class WeatherModel {
-
   Future<dynamic> getLocationWeather() async {
     Location location = Location();
     await location.getCurrentLocation();
